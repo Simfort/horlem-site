@@ -2,7 +2,13 @@
 
 import prisma from "../../../prisma/seed";
 
-export default async function createUser(currState: string, fd: FormData) {
+export default async function createUser(
+  currState: {
+    message: string[];
+    payload: { name: string; email: string; password: string };
+  },
+  fd: FormData
+) {
   const formData = {
     name: fd.get("name") as string,
     email: fd.get("email") as string,

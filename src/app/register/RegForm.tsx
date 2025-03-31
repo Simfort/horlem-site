@@ -4,9 +4,15 @@ import createUser from "../lib/createUser";
 import { redirect } from "next/navigation";
 
 export default function RegForm() {
-  const [state, formAction] = useActionState(createUser, {
+  const [state, formAction] = useActionState<
+    {
+      message: string[];
+      payload: { name: string; email: string; password: string };
+    },
+    FormData
+  >(createUser, {
     message: [],
-    payload: null,
+    payload: { name: "", email: "", password: "" },
   });
   useEffect(() => {
     if (state.message[0] == "succesfully") {
