@@ -15,13 +15,13 @@ export default function Search() {
         onBlur={() => {
           setFocus(false);
         }}
-        className=" bg-[rgba(255,255,255,0.2)] rounded-tl-2xl rounded-bl-2xl outline-none h-[40px] w-20 p-5 transition-all duration-500 text-2xl text-black focus:bg-white focus:w-90"
+        className=" bg-[rgba(255,255,255,0.2)] rounded-tl-2xl rounded-bl-2xl outline-none h-[40px] w-20  p-5 transition-all duration-500 text-2xl text-black focus:bg-white focus:w-40"
         type="text"
       />
       <div
         className={`flex items-center transition-all duration-500 bg-[rgba(255,255,255,0.2)] ${
           focus && "bg-white"
-        } rounded-tr-2xl rounded-br-2xl h-[40px] w-20 p-5`}>
+        } rounded-tr-2xl rounded-br-2xl h-[40px] w-20  p-5`}>
         <Image
           className=" transition-all duration-300"
           height={30}
