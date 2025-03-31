@@ -22,23 +22,27 @@ function AsideNav({
         href="/">
         Home
       </Link>
-      <Link
-        className=" transition-color   border-b-1    min-w-40 text-center duration-150  hover:opacity-40 p-3  "
-        href="/user">
-        {localStorage}
-      </Link>
+      {localStorage && (
+        <Link
+          className=" transition-color   border-b-1    min-w-40 text-center duration-150  hover:opacity-40 p-3  "
+          href="/user">
+          {localStorage}
+        </Link>
+      )}
       {!localStorage && (
         <Link
-          className=" transition-color border-2 rounded-2xl  min-w-40 text-center  duration-150  hover:opacity-40 p-3  "
+          className=" bg-white text-black transition-color  rounded-2xl  min-w-40 text-center duration-150 mt-[270%]  hover:opacity-40 p-3 "
           href="/register">
           Register
         </Link>
       )}
-      <Link
-        className="bg-white text-black transition-color  rounded-2xl  min-w-40 text-center duration-150 mt-[270%]  hover:opacity-40 p-3  "
-        href="/user">
-        Log Out
-      </Link>
+      {localStorage && (
+        <Link
+          className="bg-white text-black transition-color  rounded-2xl  min-w-40 text-center duration-150 mt-[270%]  hover:opacity-40 p-3  "
+          href="/user">
+          Log Out
+        </Link>
+      )}
     </nav>
   );
 }
