@@ -21,7 +21,7 @@ export default function RegForm() {
         redirect("/");
       }
     }
-  }, [state.message]);
+  }, [state.message, state.payload]);
   return (
     <form
       action={formAction}
